@@ -81,6 +81,12 @@ angular.module('testApp')
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl'
       })
+
+      .when('/places', {
+        templateUrl: 'views/places.html',
+        controller: 'PlacesCtrl'
+      })
+
       .otherwise({redirectTo: '/'});
   }])
 

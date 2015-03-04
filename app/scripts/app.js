@@ -8,7 +8,9 @@
  *
  * Main module of the application.
  */
+
 angular.module('testApp', [
+    'ngAutocomplete',
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -19,3 +21,4 @@ angular.module('testApp', [
     'firebase.utils',
     'simpleLogin'
   ]);
+ 
