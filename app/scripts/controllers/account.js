@@ -11,6 +11,7 @@ angular.module('testApp')
     $scope.user = user;
     $scope.logout = simpleLogin.logout;
     $scope.messages = [];
+    var image;
     var profile;
     loadProfile(user);
 
@@ -20,5 +21,7 @@ angular.module('testApp')
       }
       profile = fbutil.syncObject('users/'+user.uid);
       profile.$bindTo($scope, 'profile');
+      image = user.image;
+
     }
   });

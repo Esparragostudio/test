@@ -3,11 +3,18 @@
 <div class="col-md-12">
   <h3>Profile</h3>
 
+
+  <img ng-src="http://graph.facebook.com/{{user.facebook.id}}/picture"/>
+   <a ng-href="https://www.facebook.com/{{user.facebook.id}}" target="_blank"><h2>Mira tu perfil en Facebook :)</h2></a>
+
   <form role="form">
     <p class="form-group">
-      <label>Account ID</label>
-      <br />{{user.uid}}
+      <label>Account ID</label><br/>
+
+      {{user.uid}}
     </p>
+
+    <h1>{{user.facebook.displayName}}</h1>
 
     <p class="form-group">
       <label>Name:</label>
