@@ -21,4 +21,3 @@ angular.module('testApp', [
     'firebase.utils',
     'simpleLogin'
   ]);
- 

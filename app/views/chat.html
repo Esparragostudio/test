@@ -1,13 +1,18 @@
+<div class="container">
+	<div ng-include="'views/nav.html'"></div>
+	<h2>Chat</h2>
 
-<h2>Chat</h2>
+	<form>
+	  <input placeholder="Message..." ng-model="newMessage">
+	  <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
+	</form>
+	<p>{{ user.facebook.displayName }}</p>
+	<ul id="messages" ng-show="messages.length">
+	  <li ng-repeat="message in messages | reverse">
+	  	<img ng-src="http://graph.facebook.com/{{message.userid}}/picture" alt="" class="img-circle" style="width:30px;height:30px;">
+	  	{{ message.text }}
+	  </li>
+	</ul>
 
-<form>
-  <input placeholder="Message..." ng-model="newMessage">
-  <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
-</form>
-
-<ul id="messages" ng-show="messages.length">
-  <li ng-repeat="message in messages | reverse">{{message.text}}</li>
-</ul>
-
-<p class="alert alert-danger" ng-show="err">{{err}}</p>
+	<p class="alert alert-danger" ng-show="err">{{err}}</p>
+</div>

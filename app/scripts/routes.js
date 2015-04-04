@@ -58,8 +58,13 @@ angular.module('testApp')
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/login.html',
+        controller: 'loginCtrl'
+      })
+
+      .whenAuthenticated('/', {
+        templateUrl: 'views/account.html',
+        controller: 'AccountCtrl'
       })
 
       .when('/login', {
@@ -67,7 +72,7 @@ angular.module('testApp')
         controller: 'LoginCtrl'
       })
 
-      .when('/chat', {
+      .whenAuthenticated('/chat', {
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl'
       })
@@ -75,11 +80,6 @@ angular.module('testApp')
       .whenAuthenticated('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
-      })
-
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
       })
 
       .when('/places', {

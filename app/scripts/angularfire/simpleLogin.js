@@ -23,6 +23,7 @@
         angular.forEach(listeners, function(fn) {
           fn(fns.user);
         });
+
       }
 
       var fns = {

@@ -13,13 +13,6 @@ angular.module('testApp')
       simpleLogin.login(provider, {rememberMe: true}).then(redirect, showError);
     };
 
-    $scope.anonymousLogin = function() {
-      $scope.err = null;
-      simpleLogin.anonymousLogin({rememberMe: true}).then(redirect, showError);
-    };
-
-    
-
     function redirect() {
       $location.path('/account');
     }
